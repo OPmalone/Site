@@ -2,13 +2,13 @@
 
 require_once __DIR__ . "/../autoload.php";
 
-use App\Controllers\Authcontroller;
-
 session_start();
 
 $uri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
-$controller = new Authcontroller($pdo);
+use App\Controllers\AuthController;
+
+$controller = new AuthController($pdo);
 
 switch ($uri) {
     case "/":

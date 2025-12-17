@@ -2,10 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\User;
-use App\Models\UserDAO;
-
-class Authcontroller
+class AuthController
 {
     private UserDAO $userDAO;
 
