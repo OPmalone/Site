@@ -3,8 +3,8 @@
 spl_autoload_register(callback: function ($class): void {
     
     $paths = [
-        __DIR__ . "./app/models",
-        __DIR__ . "./app/controllers",
+        __DIR__ . "./App/Models",
+        __DIR__ . "./App/Controllers",
     ];
 
     foreach ($paths as $path) {

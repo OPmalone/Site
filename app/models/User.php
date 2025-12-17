@@ -1,5 +1,7 @@
 <?php
 
+namespace App\models;
+
 class User
 {
     private $id, $nome, $email, $senha, $tempo;

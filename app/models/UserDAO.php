@@ -1,5 +1,6 @@
 <?php
-require_once "User.php";
+namespace App\Models;
+
 class UserDAO
 {
     private PDO $pdo;

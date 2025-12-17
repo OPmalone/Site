@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Models\User;
+use App\Models\UserDAO;
+
 class Authcontroller
 {
     private UserDAO $userDAO;
@@ -11,7 +16,7 @@ class Authcontroller
 
     public function showLogin()
     {
-        require __DIR__ . "/../views/login.php";
+        require __DIR__ . "/../Views/login.php";
     }
 
     public function login()
@@ -37,7 +42,7 @@ class Authcontroller
 
     public function showCadastro()
     {
-        require __DIR__ . "/../views/cadastro.php";
+        require __DIR__ . "/../Views/cadastro.php";
     }
 
     public function cadastro()
@@ -59,7 +64,7 @@ class Authcontroller
         }
 
         $hash = password_hash($senha, PASSWORD_DEFAULT);
-        $user = new User($nome, $email, $hash);
+        $user = new App\Models\User($nome, $email, $hash);
 
         $this->userDAO->create($user);
 
